@@ -1,0 +1,458 @@
+/* Importei o arquivo base.css para esse arquivo CSS */
+
+@import url(/assets/css/base.css);
+
+/* parte cabeçalho */
+
+.cabecalho {
+    height: 137px;
+    width: 100%;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho .titulo-cabecalho {
+    font-size: 48px;
+    color: var(--verde);
+    margin: 0 0 0 16px;
+    font-family: var(--familia-titulo);
+}
+
+.cabecalho figure .imagem-cabecalho {
+    margin: 10em 10em 0 0;
+}
+
+/* parte main */
+
+.corpoSite {
+    background-color: var(--verde);
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    font-family: var(--familia-corpo);
+}
+
+.corpoSite .conteudo {
+    height: 100%;
+    padding: 2em 2em 0 2em;
+}
+
+.corpoSite .conteudo .div-conteudo{
+    height: 20%;
+    width: 70%;
+    margin-bottom: 1em;
+    animation: apareceParagrafo 1.5s;
+    opacity: 1;
+}
+
+/* Animação para fazer "aparecer" um texto/paragrafo, etc. */ 
+
+@keyframes apareceParagrafo {
+    from {opacity: 0;}
+
+    to {opacity: 1;}
+}
+
+.corpoSite .conteudo .div-conteudo .texto-principal {
+    font-size: 1.5em;
+    color: var(--branco);
+    margin-bottom: 1em;
+}
+
+.corpoSite .conteudo .div-conteudo .texto-informativo {
+    font-size: 1.25em;
+    color: var(--branco);
+    margin-bottom: 4em;
+}
+
+.corpoSite .sites .site {
+    margin: 0 auto 4em auto;
+    width: 90%;
+    animation: apareceParagrafo 4s;
+    opacity: 1;
+    
+}
+
+.corpoSite .sites .site h2 {
+    font-size: 2em;
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.corpoSite .sites .site .titulo-site {
+    
+    font-size: 1.4em;
+    color: var(--branco);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.corpoSite .sites .site figure .imagem-site {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.corpoSite .sites .site figure legend {
+    color: var(--branco);
+    text-align: center;
+    font-size: 1.1em;
+    padding: 1em;
+}
+
+.corpoSite .sites .site figure legend a {
+    text-decoration: none;
+    color: var(--cinza-claro);
+}
+
+.corpoSite .encerramento .div-encerramento {
+    margin-top: 10em;
+    animation: apareceParagrafo 4s;
+    opacity: 1;
+}
+
+.corpoSite .encerramento .div-encerramento .texto-encerramento{
+    color: var(--branco);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.corpoSite .encerramento .conteudo-sobremim {
+    border: 0.25em solid var(--cinza-claro);
+    border-radius: 10px;
+    padding: 1em;
+    margin: 10em auto 0 auto;
+    width: 70%;
+    animation: apareceParagrafo 4s;
+    opacity: 1;
+}
+
+.corpoSite .encerramento .conteudo-sobremim h2 {
+    font-size: 1.25em;
+    color: var(--branco);
+}
+
+.corpoSite .encerramento .conteudo-sobremim .texto-sobremim {
+    font-size: 1.25em;
+    color: var(--branco);
+}
+
+.corpoSite .encerramento .conteudo-sobremim .texto-sobremim a {
+    text-decoration: none;
+    color: var(--cinza-claro);
+}
+
+.corpoSite .setinha .seta {
+    margin: 2em 0 1em 1em;
+    
+}
+
+/* parte footer */
+
+.footer {
+    height: 100%;
+    width: 100%;
+    background-color: var(--branco);
+}
+
+.footer .icones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em 0;
+}
+
+/* A partir daqui faço a parte responsiva do site */
+
+@media (max-width: 400px){
+    .cabecalho {
+        height: 70px;
+        width: 100%;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 28px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 100px;
+        width: 100px;
+        margin: 64px 38px 0 0;
+    }
+
+    .corpoSite { 
+        height: 100%;
+        width: 80%;
+    }
+
+    .corpoSite .conteudo{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    .corpoSite .conteudo .div-conteudo{
+        height: 20%;
+        width: 100%;
+        margin: 4em 0 1em 0;
+        text-align: center;
+        
+    }
+
+    .corpoSite .conteudo .div-conteudo .texto-principal {
+        font-size: 1.1em;
+    }
+
+    .corpoSite .conteudo .div-conteudo .texto-informativo {
+        font-size: 1em;
+    }
+
+    .corpoSite .sites .site {
+        width: 100%;
+    }
+
+    .corpoSite .sites .site h2 {
+        font-size: 1.2em;
+        color: var(--branco);
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .corpoSite .sites .site .titulo-site {
+        font-size: 1em;
+    }
+
+    .corpoSite .sites .site figure .imagem-site {
+        height: 250px;
+        width: 270px;
+    }
+
+    .corpoSite .sites .site figure legend {
+        font-size: 14px;
+        
+    }
+
+    .corpoSite .sites .site figure legend a{
+        font-size: 13px;
+    }
+
+    .corpoSite .sites .site-2 {
+        margin-bottom: 2em;
+    }
+
+    .corpoSite .sites .site-2 figure .imagem-site {
+        height: 400px;
+        width: 200px;
+    }
+
+    .corpoSite .encerramento .div-encerramento {
+        margin-top: 2em;
+    }
+
+    .corpoSite .encerramento .div-encerramento .texto-encerramento{
+        font-size: 1em;
+    }
+
+    .corpoSite .encerramento .conteudo-sobremim {
+        width: 85%;
+        margin-top: 5em;
+        text-align: center;
+    }
+
+    .corpoSite .encerramento .conteudo-sobremim h2 {
+        font-size: 1em;
+    }
+
+    .corpoSite .encerramento .conteudo-sobremim .texto-sobremim {
+        font-size: 1em;
+    }
+
+    .setinha .seta {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 770px){
+    .cabecalho {
+        height: 100px;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 36px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 150px;
+        width: 150px;
+        margin: 64px 39px 0 0;
+    }
+
+    .corpoSite { 
+        width: 90%;
+    }
+
+    .corpoSite .conteudo-cursos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .corpoSite .conteudo .div-conteudo{
+        width: 100%;
+        margin-top: 5em;
+    }
+
+    .corpoSite .conteudo .div-conteudo .texto-informativo {
+        font-size: 1.35em;
+    }
+
+    .corpoSite .sites .site {
+        width: 100%;
+    }
+
+    .corpoSite .sites .site h2 {
+        font-size: 1.5em;
+        color: var(--branco);
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .corpoSite .sites .site .titulo-site {
+        font-size: 1.35em;
+    }
+
+    .corpoSite .sites .site figure .imagem-site {
+        height: 500px;
+        width: 90%;
+    }
+
+    .corpoSite .sites .site figure legend {
+        font-size: 1.25em;        
+    }
+
+    .corpoSite .sites .site figure legend a{
+        font-size: 1em;
+    }
+
+    .corpoSite .sites .site-2 figure .imagem-site {
+        height: 800px;
+        width: 500px;
+    }
+
+    .corpoSite .encerramento .div-encerramento {
+        margin-top: 5em;
+    }
+
+    .corpoSite .encerramento .conteudo-sobremim {
+        width: 90%;
+        margin-top: 5em;
+        text-align: center;
+    }
+
+    .setinha .seta {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px){
+    .cabecalho {
+        height: 150px;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 48px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 200px;
+        width: 200px;
+        margin: 86px 50px 0 0;
+    }
+
+    .corpoSite { 
+        width: 90%;
+    }
+
+    .corpoSite .conteudo-cursos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .corpoSite .conteudo .div-conteudo{
+        width: 100%;
+        margin-top: 5em;
+    }
+
+    .corpoSite .conteudo .div-conteudo .texto-principal {
+        font-size: 2em;
+    }
+
+    .corpoSite .conteudo .div-conteudo .texto-informativo {
+        font-size: 1.75em;
+    }
+
+    .corpoSite .sites .site {
+        width: 100%;
+    }
+
+    .corpoSite .sites .site h2 {
+        font-size: 2em;
+        color: var(--branco);
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .corpoSite .sites .site .titulo-site {
+        font-size: 1.75em;
+    }
+
+    .corpoSite .sites .site figure .imagem-site {
+        height: 700px;
+        width: 90%;
+    }
+
+    .corpoSite .sites .site figure legend {
+        font-size: 1.75em;        
+    }
+
+    .corpoSite .sites .site figure legend a{
+        font-size: 1em;
+    }
+
+    .corpoSite .sites .site-2 figure .imagem-site {
+        height: 800px;
+        width: 500px;
+    }
+
+    .corpoSite .encerramento .div-encerramento {
+        margin-top: 4em;
+    }
+
+    .corpoSite .encerramento .div-encerramento .texto-encerramento{
+        font-size: 2em;
+    }
+
+    .corpoSite .encerramento .conteudo-sobremim {
+        width: 90%;
+        margin: 5em auto 0 auto;
+        text-align: center;
+    }
+
+    .corpoSite .encerramento .conteudo-sobremim h2 {
+        font-size: 1.75em;
+    }
+
+    .corpoSite .encerramento .conteudo-sobremim .texto-sobremim {
+        font-size: 1.75em;
+    }
+
+    .setinha .seta {
+        height: 80px;
+        width: 80px;
+    }
+
+}

@@ -1,0 +1,458 @@
+/* Importei o arquivo base.css para esse arquivo CSS */
+
+@import url(/assets/css/base.css);
+
+
+/* Parte cabeçalho */
+
+.cabecalho {
+    height: 137px;
+    width: 100%;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho .titulo-cabecalho {
+    font-size: 48px;
+    color: var(--verde);
+    margin: 0 0 0 16px;
+    font-family: var(--familia-titulo);
+}
+
+.cabecalho figure .imagem-cabecalho {
+    margin: 10em 10em 0 0;
+}
+
+/* Parte Main */
+
+.corpoSite {
+    background-color: var(--verde);
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.corpoSite .conteudo{
+    height: 100%; 
+}
+
+.corpoSite .paragrafo .titulo-conteudo {
+    color: var(--branco);
+    font-size: 36px;
+}
+
+.corpoSite .paragrafo .texto {
+    color: var(--branco);
+    font-size: 30px;
+    text-align: center;
+    padding: 32px;
+}
+
+.corpoSite .paragrafo-1 {
+    height: 250px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+    animation: apareceParagrafo 2s;
+    opacity: 1;
+}
+
+/* Animação para fazer "aparecer" um texto/paragrafo, etc. */ 
+
+@keyframes apareceParagrafo {
+    from {opacity: 0;}
+
+    to {opacity: 1;}
+}
+
+.corpoSite .paragrafo-1 .imagem-alura {
+    margin-left: 50px;
+}
+
+.corpoSite .paragrafo-2 {
+    height: 350px;
+    width: 100%;
+    text-align: center;
+    float: right;
+    margin: 100px 50px;
+    animation: apareceParagrafo 2s;
+    opacity: 1;
+}
+
+.surgeParagrafo {
+    animation: apareceParagrafo 2s;
+    opacity: 1;
+}
+
+
+.corpoSite .paragrafo-2 .container {
+    display: flex;
+}
+
+.corpoSite .paragrafo-2 .container .texto{
+    padding-top: 0;
+}
+
+.corpoSite .paragrafo-2 .video {
+    margin: 0 100px 0 100px;
+}
+
+.corpoSite .paragrafo-2 .container .texto{
+    flex-shrink: 3;
+}
+
+.corpoSite .paragrafo-3 {
+    height: 250px;
+    width: 80%;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    opacity: 1;
+}
+
+
+.corpoSite .paragrafo-3 .imagem-cursosAlura {
+    margin-left: 70px;
+    
+}
+
+.corpoSite .video-frontEnd {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+.setinha {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.setinha .seta {
+    margin-right: 2em;
+}
+
+/* Parte footer */
+
+.footer {
+    height: 100%;
+    width: 100%;
+    background-color: var(--branco);
+}
+
+.footer .icones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em 0;
+}
+
+/* A partir daqui faço a parte responsiva do site */
+
+@media (max-width: 400px){
+    .cabecalho {
+        height: 70px;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 28px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 100px;
+        width: 100px;
+        margin: 64px 20px 0 0;
+    }
+
+    .corpoSite { 
+        height: 100%;
+        width: 80%;
+    }
+
+    .corpoSite .conteudo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .corpoSite .paragrafo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 3em auto;
+    }
+
+    .corpoSite .paragrafo .texto {
+        font-size: 1.1em;
+        line-height: 1.25;
+    }
+
+    .corpoSite .paragrafo-1 .imagem-alura {
+        margin: 0 0 2em 0;
+        height: 100px;
+        width: 100px;   
+    }
+
+    .corpoSite .paragrafo-2 {
+        margin: 3em 0 0 0;
+        width: 100%;
+        height: 500px;
+    }
+
+    .corpoSite .paragrafo-2 .container {
+        flex-direction: column-reverse;
+    }
+
+    .corpoSite .paragrafo-2 .video {
+        margin: 0 auto;
+        width: 290px;
+        height: 200px;
+    }
+
+    .corpoSite .paragrafo-3 {
+        margin: 3em 0 3em 0;
+        height: 390px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .corpoSite .paragrafo-3 .texto {
+        margin: 0;
+    }
+
+    .corpoSite .paragrafo-3 .imagem-cursosAlura {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .corpoSite .video-frontEnd {
+        width: 100%;
+        margin: 0;
+    }
+
+    .corpoSite .video-frontEnd .video2 {
+        margin: 1em auto;
+        height: 200px;
+        width: 290px;
+    }
+
+    .setinha {
+        display: flex;
+        justify-content: right;
+        height: 50px;
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .setinha .seta {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 770px){
+    .cabecalho {
+        height: 100px;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 36px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 150px;
+        width: 150px;
+        margin: 64px 39px 0 0;
+    }
+
+    .corpoSite { 
+        height: 100%;
+        width: 80%;
+    }
+
+    .corpoSite .paragrafo .texto {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .corpoSite .paragrafo-1 {
+        margin-left: 0;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .corpoSite .paragrafo-1 .texto {
+        margin-top: 3em;
+    }
+
+    .corpoSite .paragrafo-1 .imagem-alura {
+        margin: 6em 2em 0 0;
+        height: 100px;
+        width: 100px;   
+    }
+
+    .corpoSite .paragrafo-2 {
+        margin: 3em 0 0 0;
+        width: 100%;
+        height: 750px;
+    }
+
+    .corpoSite .paragrafo-2 .container {
+        flex-direction: column-reverse;
+    }
+
+    .corpoSite .paragrafo-2 .video {
+        margin: 0 auto;
+        width: 90%;
+        height: 360px;
+    }
+
+    .corpoSite .paragrafo-3 {
+        bottom: 30%;
+        margin: 0 0 3em 0;
+        width: 100%;
+        flex-direction: column;
+        height: 400px;
+        justify-content: center;
+    }
+
+    .corpoSite .paragrafo-3 .texto {
+        margin: 0;
+    }
+
+    .corpoSite .paragrafo-3 .imagem-cursosAlura {
+        margin: 0;
+        width: 300px;
+        height: 150px;
+    }
+
+    .corpoSite .video-frontEnd {
+        width: 100%;
+        margin: 0;
+    }
+
+    .corpoSite .video-frontEnd .video2 {
+        height: 360px;
+        width: 90%;
+    }
+
+    .setinha {
+        display: flex;
+        justify-content: right;
+        height: 50px;
+        width: 100%;
+        margin-top: 1em;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px){
+    .cabecalho {
+        height: 150px;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 48px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 200px;
+        width: 200px;
+        margin: 86px 50px 0 0;
+    }
+
+    .corpoSite { 
+        height: 100%;
+        width: 80%;
+    }
+
+    .corpoSite .paragrafo .texto {
+        font-size: 36px;
+        line-height: 1.25;
+    }
+
+    .corpoSite .paragrafo-1 {
+        margin-left: 0;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+    }
+
+    .corpoSite .paragrafo-1 .texto {
+        margin-top: 3em;
+    }
+
+    .corpoSite .paragrafo-1 .imagem-alura {
+        margin: 6em 2em 0 0;
+        height: 150px;
+        width: 150px;   
+    }
+
+    .corpoSite .paragrafo-2 {
+        margin: 10em 0 0 0;
+        width: 100%;
+        height: 950px;
+    }
+
+    .corpoSite .paragrafo-2 .container {
+        flex-direction: column-reverse;
+    }
+
+    .corpoSite .paragrafo-2 .video {
+        margin: 2em auto 0 auto;
+        width: 90%;
+        height: 460px;
+    }
+
+    .corpoSite .paragrafo-3 {
+        margin: 6em 0 6em 0;
+        width: 100%;
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .corpoSite .paragrafo-3 .texto {
+        margin: 0;
+    }
+
+    .corpoSite .paragrafo-3 .imagem-cursosAlura {
+        margin: 2em;
+        width: 500px;
+        height: 250px;
+        display: inline-block;
+    }
+
+    .corpoSite .video-frontEnd {
+        width: 100%;
+        margin: 0;
+    }
+
+    .corpoSite .video-frontEnd .video2 {
+        margin: 0 auto 32px auto;
+        height: 460px;
+        width: 90%;
+    }
+
+    .setinha {
+        display: flex;
+        justify-content: right;
+        height: 70px;
+        width: 100%;
+        margin-top: 1em 0;
+    }
+
+    .setinha .seta {
+        height: 70px;
+        width: 70px;
+    }
+}

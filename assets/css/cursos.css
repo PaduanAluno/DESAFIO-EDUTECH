@@ -1,0 +1,316 @@
+/* Importei o arquivo base.css para esse arquivo CSS */
+
+@import url(/assets/css/base.css);
+
+/* parte cabeçalho */
+
+.cabecalho {
+    height: 137px;
+    width: 100%;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho .titulo-cabecalho {
+    font-size: 48px;
+    color: var(--verde);
+    margin: 0 0 0 16px;
+    font-family: var(--familia-titulo);
+}
+
+.cabecalho figure .imagem-cabecalho {
+    margin: 10em 10em 0 0;
+}
+
+/* parte main */
+
+.corpoSite {
+    background-color: var(--verde);
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.corpoSite .texto-sobre{
+    width: 70%;
+}
+
+.corpoSite .texto-sobre .titulo-paginaAtual {
+    color: var(--branco);
+    font-size: 32px;
+    padding: 2em;
+}
+
+
+.cursos {
+    height: 100%;
+    margin: 1em 4em 0 4em;
+}
+
+.cursos .curso {
+    height: 30%;
+    margin-top: 4em;
+    padding: 1em;
+    animation: apareceParagrafo 2s;
+    opacity: 1;
+}
+
+/* Animação para fazer "aparecer" um texto/paragrafo, etc. */ 
+
+
+@keyframes apareceParagrafo {
+    from {opacity: 0;}
+
+    to {opacity: 1;}
+}
+
+.cursos .curso:hover {
+    border: 4px solid black;
+    border-radius: 10px;
+    transition: 0.43s;
+}
+
+.cursos .curso .titulo-cursos {
+    margin-bottom: 1em;
+}
+
+.cursos .curso .titulo-cursos a{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 28px;
+}
+
+.cursos .curso .titulo-cursos a:hover {
+    font-size: 34px;
+    transition: 0.43s;
+}
+
+.cursos .curso .texto-cursos {
+    color: var(--branco);
+    font-size: 24px;
+    margin-bottom: 1em;
+}
+
+.cursos .curso img {
+    display: block;
+    margin: 0 auto 0 auto;
+    padding-bottom: 2em;
+}
+
+.cursos .curso-7 img {
+    padding-bottom: 6em;
+}
+
+.cursos .curso img:hover {
+    height: 250px;
+    width: 350px;
+    transition: 0.43s;
+
+}
+
+.cursos .setinha {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Parte footer */
+
+.footer {
+    height: 100%;
+    width: 100%;
+    background-color: var(--branco);
+}
+
+.footer .icones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em 0;
+}
+
+/* A partir daqui faço a parte responsiva do site */
+
+@media (max-width: 400px){
+    
+    .cabecalho {
+        height: 70px;
+        width: 100%;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 28px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 100px;
+        width: 100px;
+        margin: 64px 20px 0 0;
+    }
+
+    .corpoSite { 
+        overflow: hidden;
+        height: 100%;
+        width: 90%;
+    }
+
+    .corpoSite .conteudo-cursos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .corpoSite .texto-sobre{
+        width: 100%;
+    }
+
+    .corpoSite .texto-sobre .titulo-paginaAtual {
+        font-size: 24px;
+        padding: 0 1em 0 1em;
+        margin-top: 3em;
+    }
+
+    .cursos { 
+        margin: 1em 1em 0 1em;
+    }
+
+    .cursos .curso .titulo-cursos {
+        font-size: 24px;
+    }
+
+    .cursos .curso .titulo-cursos a:hover {
+        font-size: 28px;
+    }
+
+    .cursos .curso .texto-cursos {
+        font-size: 20px;
+    }
+
+    .cursos .curso img {
+        height: 200px;
+        width: 250px;
+        margin: 0 auto 0 auto;
+    }
+
+    .cursos .curso img:hover {
+        height: 250px;
+        width: 270px;
+    }
+
+    .cursos .curso-7 img {
+        padding-bottom: 2em;
+    }
+
+    .setinha {
+        margin-bottom: 1em;
+    }
+
+    .setinha .seta {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 770px){
+    .cabecalho {
+        height: 100px;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 36px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 150px;
+        width: 150px;
+        margin: 64px 39px 0 0;
+    }
+
+    .corpoSite { 
+        width: 90%;
+    }
+
+    .corpoSite .conteudo-cursos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .corpoSite .texto-sobre{
+        width: 100%;
+    }
+
+    .cursos .curso-1 {
+        margin-top: 0;
+    }
+
+    .cursos .curso .titulo-cursos a{
+        font-size: 30px;
+    }
+
+    .cursos .curso .titulo-cursos a:hover {
+        font-size: 34px;
+    }
+
+    .cursos .curso .texto-cursos {
+        font-size: 26px;
+    }
+
+    .cursos .curso img {
+        height: 350px;
+        width: 450px;
+    }
+
+    .setinha .seta {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px){
+    .cabecalho {
+        height: 150px;
+    }
+
+    .cabecalho .titulo-cabecalho {
+        font-size: 48px;
+    }
+
+    .cabecalho figure .imagem-cabecalho {
+        height: 200px;
+        width: 200px;
+        margin: 86px 50px 0 0;
+    }
+
+    .corpoSite .texto-sobre{
+        width: 90%;
+    }
+
+    .corpoSite .texto-sobre .titulo-paginaAtual {
+        color: var(--branco);
+        font-size: 42px;
+        padding: 3em 1em 1em 1em;
+    }
+
+    .cursos .curso .titulo-cursos a{
+        font-size: 42px;
+    }   
+
+    .cursos .curso .titulo-cursos a:hover {
+        font-size: 44px;
+    }
+
+    .cursos .curso .texto-cursos {
+        font-size: 36px;
+        margin-top: 1em;
+    }
+
+    .cursos .curso img {
+        height: 450px;
+        width: 550px;
+    }
+
+    .setinha .seta {
+        height: 80px;
+        width: 80px;
+    }
+}

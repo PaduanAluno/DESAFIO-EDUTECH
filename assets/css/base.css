@@ -1,0 +1,16 @@
+/* Defini algumas variáveis que usarei comulmente no site */
+
+:root {
+    --verde: #00863F;
+    --branco: #FFFFFF;
+    --azul-escuro: #174B8E;
+    --preto: #000000;
+    --cinza-claro: #C4C4C4;
+
+    --familia-titulo: "Montserrat", sans-serif;
+    --familia-corpo: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--azul-escuro);
+}

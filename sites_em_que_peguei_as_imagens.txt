@@ -1,0 +1,23 @@
+Sites da onde tirei as imagens:
+
+lógica da programação: imagem feita por mim.
+
+html/css: https://ayltoninacio.com.br/blog/como-criar-seu-primeiro-site-do-zero-com-html-e-css
+
+flexbox:https://www.chiefofdesign.com.br/css-flexbox/
+
+layoult-responsivo: https://webinsider.com.br/layouts-responsivos-questao-de-sobrevivencia-para-webmasters-e-empresas/
+
+grid: https://blog.dankicode.com/css-grid-layout/
+
+arquitetura-css:https://www.alura.com.br/curso-online-arquitetura-css
+
+bootstrap: https://medium.com/reactbrasil/bootstrap-5-chegou-compilado-com-as-10-principais-novidades-ad5a240ae4ae
+
+js: https://www.gratispng.com/baixar/javascript-logo.html
+
+acessibilidade front-end: https://www.alura.com.br/curso-online-acessibilidade-web-front-end
+
+http: https://stringfixer.com/pt/Http
+
+https://www.alura.com.br/curso-online-svg-css-animacao
